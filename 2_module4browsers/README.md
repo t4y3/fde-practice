@@ -2,27 +2,27 @@
 
 ## moment.jsをNode.jsで使う
 
-### ディレクトリ移動
+### ディレクトリ移動（Terminalでコマンド実行）
 ```sh
 cd 2_module4browsers/
 ```
 
-### package.jsonファイルを作成
+### package.jsonファイルを作成（Terminalでコマンド実行）
 ```sh
 npm init -y
 ```
   - カレントディレクトリに`package.json`を作成します
   - `-y`はオプションなので必須ではないです。
 
-### 必要なモジュールをインストール
+### 必要なモジュールをインストール（Terminalでコマンド実行）
 ```sh
 npm i moment -S
 ```
 
-### Node.jsで実行
+### Node.jsで実行（Terminalでコマンド実行）
 ```sh
 # 現在日付がconsoleに表示されればOK
-ndoe main.js
+node main.js
 ```
 
 ### index.htmlをブラウザで確認してみる
@@ -35,12 +35,7 @@ ndoe main.js
 
 ## moment.jsをブラウザで使う(rollup.js)
 
-### ディレクトリ移動
-```sh
-cd 2_module4browsers/
-```
-
-### 必要なモジュールをインストール
+### 必要なモジュールをインストール（Terminalでコマンド実行）
 ```sh
 npm i rollup rollup-plugin-commonjs rollup-plugin-node-resolve -D
 ```
@@ -48,7 +43,7 @@ npm i rollup rollup-plugin-commonjs rollup-plugin-node-resolve -D
   `node_modules/`がない場合はフォルダ毎生成されます。
   - `-D`は依存関係に関するオプションで必須ではないです。
 
-### npm-scriptsにビルドタスクを記述
+### npm-scriptsにビルドタスクを記述（package.jsonを修正）
 ```json
 "scripts": {
   "build:js": "rollup -c"
@@ -56,7 +51,7 @@ npm i rollup rollup-plugin-commonjs rollup-plugin-node-resolve -D
 ```
   - `package.json`の`scripts`に記述したコマンドは、`npm run {コマンド名}`で実行できます。
 
-### ビルド実行
+### ビルド実行（Terminalでコマンド実行）
 ```sh
 npm run build:js
 ```

@@ -1,23 +1,23 @@
 # npm-scriptsを試してみる
 
-### ディレクトリ移動
+### ディレクトリ移動（Terminalでコマンド実行）
 ```sh
 cd 3_taskrunner/
 ```
 
-### package.jsonファイルを作成
+### package.jsonファイルを作成（Terminalでコマンド実行）
 ```sh
 npm init -y
 ```
   - カレントディレクトリに`package.json`を作成します
   - `-y`はオプションなので必須ではないです。
 
-### 必要なモジュールをインストール
+### 必要なモジュールをインストール（Terminalでコマンド実行）
 ```sh
 npm i buble node-sass npm-run-all pug-cli -D
 ```
 
-### npm-scriptsにビルドタスクを記述
+### npm-scriptsにビルドタスクを記述（package.jsonを修正）
 ```json
 "scripts": {
   "build": "run-s build:*",
@@ -28,7 +28,7 @@ npm i buble node-sass npm-run-all pug-cli -D
 ```
   - `package.json`の`scripts`に記述したコマンドは、`npm run {コマンド名}`で実行できます。
 
-### ビルド実行
+### ビルド実行（Terminalでコマンド実行）
 ```sh
 npm run build
 ```
