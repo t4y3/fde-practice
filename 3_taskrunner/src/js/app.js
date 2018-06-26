@@ -1,3 +1,6 @@
 window.addEventListener('load', () => {
-  console.log(12345);
+  let button = document.querySelector('button');
+  button.addEventListener('click', () => {
+    alert('クリックされました。');
+  });
 });
