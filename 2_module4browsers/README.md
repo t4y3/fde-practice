@@ -58,7 +58,9 @@ npm run build:js
   - bundle.jsが生成されているはず
 
 ### index.htmlをブラウザで確認してみる
-  - index.htmlのscriptのファイル名を`main.js`->`bundle.js`に変更
+  - `console`でまだエラーが出ているはず
+
+### index.htmlのscriptのファイル名を`main.js`->`bundle.js`に変更
   - `console`で現在時刻が表示されていればOK
 
 ### まとめ
