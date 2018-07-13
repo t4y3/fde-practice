@@ -1,7 +1,5 @@
 // moment.jsを読み込み
 var moment = require('moment');
-// 使ってない変数
-var test = '';
 
 /**
  * yearがうるう年か判定
