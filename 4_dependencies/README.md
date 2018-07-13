@@ -25,12 +25,16 @@ npm init -y
 npm i moment -S
 ```
 ```sh
-# npm i npm-check-updates --save-devと同じ
-npm i npm-check-updates -D
+# npm i eslint --save-devと同じ
+npm i eslint -D
 ```
 - momentはpackage.jsonの`dependencies`に追加される
-- npm-check-updatesはpackage.jsonの`devDependencies`に追加される
+- eslintはpackage.jsonの`devDependencies`に追加される
 
+### 確認用にモジュール側のnode_modules/を削除しておく（Terminalでコマンド実行）
+```sh
+rm -rf node_modules/
+```
 ---
 
 ## プロジェクト側
@@ -51,7 +55,7 @@ npm init -y
 npm i ./is-leap-year -S
 ```
 - `4_dependencies/node_modules`に`is-leap-year`と`moment`がインストールされている
-- `4_dependencies/node_modules`に`npm-check-updates`はインストールされていない
+- `4_dependencies/node_modules`に`eslint`はインストールされていない
 - 補足: [npmはローカルのパス指定も可能](https://docs.npmjs.com/files/package.json#local-paths)
 
 ### 実行（Terminalでコマンド実行）
@@ -65,7 +69,7 @@ node main.js 2018
 - -S, -Dの使い分けはpackageとして公開する場合は意識する必要がある
   - プロジェクトでの場合はそこまで意識しなくてもそこまで問題はない
 - 開発時にしか使わないモジュールなどは`devDependencies`
-  - npm-check-updatesは開発時のツールなので、モジュールとしての機能には必要ない
+  - eslintは開発時のツールなので、モジュールとしての機能には必要ない
 - モジュールとして動作する時に必要なものは`dependencies`
   - is-leap-yearの場合は年の判定で`moment`を仕様しているため、
   is-leap-yearは`moment`に依存している。
